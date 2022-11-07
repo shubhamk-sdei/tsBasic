@@ -1,0 +1,8 @@
+{
+    "watch": ["app"],
+    "ext": "ts,js,json",
+    "ignore": ["node_modules", "dist"],
+    "exec": "npx ts-node -r ./app/app.ts",
+    "restartable": "rs"
+  }
+  
