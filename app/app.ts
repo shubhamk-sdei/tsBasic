@@ -1,8 +1,8 @@
 import express from "express";
 const app = express();
 import api from "./controllers";
-const port = 3030;
-
+const port = process.env.PORT || 3030;
+console.log("the port from process is", process.env.PORT);
 app.get("/test", (req, res) => {
     res.statusCode = 200;
     res.setHeader("Content-Type", "text/plain");
@@ -12,5 +12,5 @@ app.get("/test", (req, res) => {
 app.use("/", api);
 
 app.listen(port, async () => {
-    console.log("app initialised");
+    console.log("app initialised, OK!");
 });
